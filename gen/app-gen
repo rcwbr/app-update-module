@@ -506,7 +506,7 @@ prepare_images() {
     done
     for ((i = 0; i < ${#local_images[@]}; i++)); do
         images_shas+=($(get_image_sha "${local_images[${i}]}"))
-        images+=${local_images[${i}]}
+        images+=(${local_images[${i}]})
     done
 
     declare -p images_shas
