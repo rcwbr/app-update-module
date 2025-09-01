@@ -250,7 +250,7 @@ temp_dir="$(mktemp -d)"
 mkdir "${temp_dir}/images"
 
 function cleanup() {
-    rm -Rf "$temp_dir"
+    # rm -Rf "$temp_dir" TODO restore
 }
 trap cleanup EXIT SIGQUIT SIGTERM
 
